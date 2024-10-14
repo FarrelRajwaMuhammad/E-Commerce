@@ -1,12 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 
 Route::get('/', function () {
+    return view('auth.login');
+});
+
+Route::get('/masuk', function () {
     return view('masuk');
 });
 
-Route::get('/home', function () {
+Route::get('/profile', function () {
     return view('profile');
 });
 
