@@ -4,7 +4,7 @@
     <div class="container login-card">
         <div class="row justify-content-center">
             <div class="col">
-                <div class="card">
+                <div class="card card-wrapper">
                     <h1 class="title">{{ config('app.name') }}</h1>
 
                     <div class="card-body carding">
