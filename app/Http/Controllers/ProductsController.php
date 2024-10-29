@@ -14,13 +14,19 @@ class ProductsController extends Controller
     {
         $products = Products::all();
         $categories = Categories::all();
-        $addons = Addon::all();
+        $addons = Addon::whereHas('categories', function ($query) {
+            $query->whereNotNull('categories_id');
+        })->with('categories')->get();
+    
         return view('admin.product')->with([
             'products' => $products,
             'categories' => $categories,
             'addons' => $addons
         ]);
     }
+    
+
+
 
     public function store(Request $request)
     {

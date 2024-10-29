@@ -30,6 +30,4 @@ Route::get('/home', [AdminController::class, 'index'])->middleware('auth');
 Route::get('/admin/product', [ProductsController::class, 'index'])->name('admin.product');
 Route::post('/admin/product', [ProductsController::class, 'store'])->name('admin.product');
 
-// Route::get('/admin/product', [AdminController::class, 'index'])->name('admin.product');
-
 Route::get('/home', [ProductsController::class, 'index'])->name('home');
